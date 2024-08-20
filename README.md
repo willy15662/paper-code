@@ -37,7 +37,7 @@ The dataset is divided into two main folders:
      - `rate`: Adjust the attack ratio.
      - `hyper_opt_evals`: Number of training iterations.
      - `epoch`: Number of epochs per training session.
-     - `enhanced_dataset`: Set to `False` initially.
+     - `enhanced_dataset`: Set to `None` initially.
 
 3. **Convert to Image Data**:
    - Set `LoadFromPickle` to `False` and run the script to convert the data into image format.
