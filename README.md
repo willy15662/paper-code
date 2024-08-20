@@ -1,6 +1,61 @@
 # paper-code
 Multi-Layer Edge Computing and IoT Intrusion Detection System with Integrated GAN and XAI
 
+Dataset
+You can download the pre-processed datasets from our Google Drive:
+
+Download Dataset
+
+The dataset is divided into two main folders:
+
+ACGAN Folder - Contains the GAN model and related files:
+
+acgan.py: Script to train the ACGAN model.
+gan.py: Contains the generator and discriminator code.
+generator.py: Generates data using the trained model and adds it to the original dataset.
+Train Folder - Contains training data and data transformation scripts:
+
+Data_preprocessing.ipynb: Pre-processes the dataset and splits it into training and testing sets.
+cart2pixel.py: Converts network traffic data into image data.
+deep.py: CNN model implementation.
+main.py: Main script to select datasets and call other scripts.
+train.py: Executes the training of the CNN model.
+part2.ipynb: Training script for the second part of the IoT model.
+Usage Instructions
+Data Preprocessing:
+
+Run the Data_preprocessing.ipynb script to preprocess the dataset and split it into training and testing sets.
+Main Script Configuration:
+
+Open main.py.
+Adjust the parameters in the param section:
+Max_A_Size: Image size.
+dir: Directory path of the dataset.
+LoadFromPickle: Set to False to convert the dataset to image format.
+rate: Adjust the attack ratio.
+hyper_opt_evals: Number of training iterations.
+epoch: Number of epochs per training session.
+enhanced_dataset: Set to False initially.
+Convert to Image Data:
+
+Set LoadFromPickle to False and run the script to convert the data into image format.
+Train GAN Model:
+
+Run acgan.py to train the GAN model using the image data.
+Generate Additional Data:
+
+Run generator.py to generate new data using the trained GAN model and append it to the original dataset.
+Train with GAN-Enhanced Data:
+
+Reopen main.py, set LoadFromPickle to True, and enhanced_dataset to gan.
+Run the script to train and test the model with the GAN-enhanced dataset.
+Train IoT Model:
+
+Execute part2_nb15.ipynb to train the second part of the IoT intrusion detection model.
+
+
+
+
 切分好的資料集檔案可以在 https://drive.google.com/drive/folders/1GcJl2iBii8gel5FoR1powVxvAs-dwG7Q?usp=sharing 雲端硬碟中下載
 
 檔案分為兩部分
